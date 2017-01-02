@@ -87,3 +87,6 @@ footer {
 footer a {
     color: #04498c;
 }
+.lead {
+  margin-bottom: inherit;
+}
