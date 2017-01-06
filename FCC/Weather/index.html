@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Local Weather</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+        <link href='css/weather-icons.css' rel="stylesheet" type="text/css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+ 
+    <!-- Main jumbotron -->
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1>Local Weather <span id="at"></span></h1>
+        <p><em><span id='weather'></span></em>&nbsp;&nbsp;<i id='wi' class='wi'></i></p>
+        <p><em><span id='temp'></span></em></p>
+        <p><em><span id="wind"></span></em></p>
+      </div>
+      <div class="text-center">
+        <div class="btn-group btn-group-xs" data-toggle="buttons">
+          <label class="btn btn-primary active" id="F">
+            <input type="radio" name="options" autocomplete="off" checked>F
+          </label>
+          <label class="btn btn-primary" id="C">
+            <input type="radio" name="options" autocomplete="off">C
+          </label>
+        </div>
+      </div>
+    </div>
+
+<!-- Map -->
+<iframe class='center-block' id='map'
+  width="400"
+  height="250"
+  frameborder="0"
+  src="" allowfullscreen>
+</iframe>
+
+<hr>
+
+<footer id='contact'>
+  <div class="container">
+    <div class="row">
+      <p class="text-center">
+            © Kent Johnson
+            &nbsp;•&nbsp;
+            2016	  
+            &nbsp;•&nbsp;
+            <a href="mailto:kent@kentsjohnson.com">kent@kentsjohnson.com</a>
+            
+            </p>
+    </div>
+  </div>
+</footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+body {
+  color: darkblue;
+}
+
+h1, h2, h3, h4, h5 {
+  font: 400 95px/1.1 'Rancho', Georgia, serif;
+}
+
+h1 {
+	font-size: 56px;
+	line-height: 80px;
+}
+
+p {
+  font: 400 17px/1.6 'Gudea', Verdana, Helvetica, sans-serif;
+}
+
+.jumbotron {
+  background-color: aliceblue;
+  border-width: 10px;
+  border-color: darkblue;
+  border-style: solid;
+  border-radius: 50%;
+  color: darkblue;
+}
+
+.jumbotron p {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.btn-group>.btn:first-child {
+    margin-left: auto;
+}
+
+#map {
+  border-width: 1px;
+  border-color: darkblue;
+  border-style: solid;
+  border-radius: 10px;
+}
