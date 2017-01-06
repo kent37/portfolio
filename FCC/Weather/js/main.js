@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var units, deg, wind;
+  var units, deg, wind, mapUrl;
   
   var refresh = function() {
     if (navigator.geolocation) {
@@ -14,17 +14,12 @@ $(document).ready(function() {
           $('#at').html('in ' + weather.name);
           $('#weather').html(desc);
           $('#temp').html(Math.round(weather.main.temp) + deg);
-//          $('#icon').attr('src', 
-//                          'http://openweathermap.org/img/w/' +
-//                          weather.weather[0].icon + '.png')
-//                    .attr('alt', 'weather icon');
           $('#wi').removeClass().addClass('wi wi-owm-'+ weather.weather[0].id);
           $('#wind').html('Wind ' + Math.round(weather.wind.speed) + ' ' + wind);
             
-            var mapUrl = 'https://www.google.com/maps/embed/v1/view?zoom=14&key=AIzaSyAyioCg5GgtIOV9zcHZaYcUDgP0xTQrZBs&center=' + 
+          mapUrl = 'https://www.google.com/maps/embed/v1/view?zoom=14&key=AIzaSyAyioCg5GgtIOV9zcHZaYcUDgP0xTQrZBs&center=' + 
                 position.coords.latitude +
             ',' + position.coords.longitude;
-          $('#map').attr('src', mapUrl);
         })
       });
     }
@@ -45,6 +40,10 @@ $(document).ready(function() {
 
     refresh();
   }
+  
+  $('.modal').on('shown.bs.modal', function() {
+        $(this).find('iframe').attr('src',mapUrl);
+    })
   
   $('#F').click(setImperial);
   $('#C').click(setMetric);
