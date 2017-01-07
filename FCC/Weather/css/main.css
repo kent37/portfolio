@@ -45,9 +45,6 @@ p {
   display: table;
 }
 
-#spinner {
-  position: absolute;
-  display: none;
-  top: 0px;
-  color: rgba(0, 0, 125, 0.5);
+.modal-content {
+  background-color: aliceblue;
 }

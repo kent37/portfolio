@@ -2,9 +2,6 @@ $(document).ready(function() {
   var units, deg, wind, mapUrl;
   
   var refresh = function() {
-      // Show spinner; don't use show(), it sets display:block
-      //$('#spinner').css('display', 'inline');
-      
       // Get the current position
       $.getJSON('http://ipinfo.io/json', function(info) {
         // Use position info
@@ -31,9 +28,6 @@ $(document).ready(function() {
     $('#temp').html(Math.round(weather.main.temp) + deg);
     $('#wi').removeClass().addClass('wi wi-owm-'+ weather.weather[0].id);
     $('#wind').html('Wind ' + Math.round(weather.wind.speed) + ' ' + wind);
-    
-    // Hide the spinner
-    //$('#spinner').hide();
   }
   
   var setImperial = function() {
