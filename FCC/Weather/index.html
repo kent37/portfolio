@@ -23,11 +23,18 @@
  
     <!-- Main jumbotron -->
     <div class="jumbotron">
-      <div class="container text-center">
+      <div class="container text-center" id='content'>
         <h1>Local Weather <span id="at"></span></h1>
-        <p><em><span id='weather'></span></em>&nbsp;&nbsp;<i id='wi' class='wi'></i></p>
-        <p><em><span id='temp'></span></em></p>
-        <p><em><span id="wind"></span></em></p>
+        <div>
+          <div style="position: relative">
+            <div id="overlay">
+              <i id='spinner' class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            </div>
+            <p><em><span id='weather'></span></em>&nbsp;&nbsp;<i id='wi' class='wi'></i></p>
+            <p><em><span id='temp'></span></em></p>
+            <p><em><span id="wind"></span></em></p>
+          </div>
+        </div>
       </div>
       <div class="text-center">
         <div class="btn-group btn-group-xs" data-toggle="buttons">

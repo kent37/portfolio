@@ -39,3 +39,15 @@ p {
   border-style: solid;
   border-radius: 10px;
 }
+
+#overlay {
+  width: 100%;
+  display: table;
+}
+
+#spinner {
+  position: absolute;
+  display: inline;
+  top: 0px;
+  color: rgba(0, 0, 125, 0.5);
+}
