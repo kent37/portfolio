@@ -47,7 +47,7 @@ p {
 
 #spinner {
   position: absolute;
-  display: inline;
+  display: none;
   top: 0px;
   color: rgba(0, 0, 125, 0.5);
 }

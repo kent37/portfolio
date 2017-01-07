@@ -2,27 +2,25 @@ $(document).ready(function() {
   var units, deg, wind, mapUrl;
   
   var refresh = function() {
-    if (navigator.geolocation) {
       // Show spinner; don't use show(), it sets display:block
-      $('#spinner').css('display', 'inline');
+      //$('#spinner').css('display', 'inline');
       
       // Get the current position
-      navigator.geolocation.getCurrentPosition(function(position) {
+      $.getJSON('http://ipinfo.io/json', function(info) {
         // Use position info
+        var loc = info.loc.split(',');
         var weatherUrl = 
             'http://api.openweathermap.org/data/2.5/weather?lat=' + 
-            position.coords.latitude +
-            '&lon=' + position.coords.longitude + '&units=' + units +
+            loc[0] +
+            '&lon=' + loc[1] + '&units=' + units +
             '&APPID=' + '3db83ed2802508059822b511371efa7b';
         
         mapUrl = 'https://www.google.com/maps/embed/v1/view?zoom=14&key=AIzaSyAyioCg5GgtIOV9zcHZaYcUDgP0xTQrZBs&center=' + 
-          position.coords.latitude +
-          ',' + position.coords.longitude;
+          info.loc;
 
         // Get the weather
         $.getJSON(weatherUrl, showWeather)
       });
-    }
   }
   
   var showWeather = function(weather) {
@@ -35,7 +33,7 @@ $(document).ready(function() {
     $('#wind').html('Wind ' + Math.round(weather.wind.speed) + ' ' + wind);
     
     // Hide the spinner
-    $('#spinner').hide();
+    //$('#spinner').hide();
   }
   
   var setImperial = function() {
