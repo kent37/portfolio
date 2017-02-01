@@ -44,6 +44,7 @@ a:hover, a:focus {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
+  box-shadow: 1px 1px 1px;
 }
 
 .button:active {
@@ -61,4 +62,10 @@ a:hover, a:focus {
   border-width: 3px;
   border-color: #736143;
   border-radius: 5px;
+  font-size: 18pt;
+  text-align: right;
+}
+
+.output span {
+  padding-right: 5px;
 }
